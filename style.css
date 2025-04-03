@@ -1,0 +1,108 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #003366, #0073e6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #005bb5;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Sections */
+.section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e6f7ff;
+    border-left: 5px solid #0073e6;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.section:hover {
+    background: #cceeff;
+    transform: translateY(-3px);
+}
+
+/* Boutons */
+button {
+    background: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Pied de page */
+footer {
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Réseaux sociaux */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ffcc;
+    transform: scale(1.2);
+}
