@@ -1,43 +1,40 @@
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Styles de base */
-* {
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* En-tête */
 header {
     background: linear-gradient(135deg, #003366, #0073e6);
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
-    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-/* Barre de navigation centrée */
+/* Barre de navigation */
 nav {
-    background-color: #005bb5;
     display: flex;
     justify-content: center;
-    padding: 15px 0;
-    width: 100%;
+    background-color: #005bb5;
+    padding: 12px;
 }
 
 nav a {
     color: white;
+    margin: 0 15px;
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
-    margin: 0 20px;
-    padding: 10px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
@@ -46,25 +43,24 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Conteneur principal qui prend toute la hauteur */
+/* Conteneur principal */
 .container {
     max-width: 1100px;
-    width: 90%;
     margin: auto;
+    padding: 25px;
     background: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    flex-grow: 1;  /* Permet d’occuper toute la hauteur dispo */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
-/* Sections avec effet au survol */
+/* Sections */
 .section {
     margin-top: 30px;
-    padding: 20px;
+    padding: 25px;
     background: #e6f7ff;
-    border-left: 5px solid #0073e6;
-    border-radius: 5px;
+    border-left: 6px solid #0073e6;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
@@ -73,24 +69,54 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-/* Pied de page fixe */
+/* Titres */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #003366;
+}
+
+/* Boutons */
+button {
+    background: #0073e6;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Pied de page */
 footer {
     background: #002244;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: auto;
-    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
 }
 
-/* Adaptation mobile */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
+/* Réseaux sociaux */
+.social-icons {
+    margin-top: 10px;
 }
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ffcc;
+    transform: scale(1.2);
+                     }
