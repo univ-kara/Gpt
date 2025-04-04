@@ -1,96 +1,260 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Université de Kara</title>
+    <meta name="description" content="Site officiel de l'Université de Kara - Excellence en éducation et recherche">
+    <title>Université de Kara - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #002244;
+            --secondary-color: #0073e6;
+            --accent-color: #e6f7ff;
+            --text-color: #333;
+            --light-color: #f4f4f4;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
         }
+        
         header {
-            background-color: #002244;
+            background-color: var(--primary-color);
             color: white;
-            padding: 20px;
+            padding: 1.5rem;
             text-align: center;
+            position: relative;
         }
-        nav {
+        
+        .logo-container {
             display: flex;
+            align-items: center;
             justify-content: center;
-            background-color: #0073e6;
-            padding: 10px;
+            gap: 1rem;
         }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 1rem;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
         }
+        
+        nav a:hover, nav a:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        
         .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
+        
+        .hero {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .hero-text {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            background-color: rgba(0, 34, 68, 0.8);
+            color: white;
+            padding: 1.5rem;
+            max-width: 50%;
+            border-radius: 8px;
+        }
+        
         .faculty-section {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #e6f7ff;
-            border-left: 5px solid #0073e6;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: var(--accent-color);
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s ease;
         }
+        
+        .faculty-section:hover {
+            transform: translateX(5px);
+        }
+        
+        .faculty-section h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .faculty-section a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .faculty-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .faculty-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        
         footer {
-            background-color: #002244;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .hero-text {
+                position: static;
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Université de Kara</h1>
+        <div class="logo-container">
+            <img src="logo-universite.png" alt="Logo Université de Kara" class="logo">
+            <h1>Université de Kara</h1>
+        </div>
     </header>
+    
     <nav>
-        <a href="index.html">Accueil</a>
-        <a href="facultes.html">Facultés</a>
-        <a href="admission.html">Admission</a>
-        <a href="recherche.html">Recherche</a>
-        <a href="vie_etudiante.html">Vie étudiante</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-container">
+            <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="facultes.html"><i class="fas fa-graduation-cap"></i> Facultés</a>
+            <a href="admission.html"><i class="fas fa-file-alt"></i> Admission</a>
+            <a href="recherche.html"><i class="fas fa-flask"></i> Recherche</a>
+            <a href="vie_etudiante.html"><i class="fas fa-users"></i> Vie étudiante</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
     </nav>
+    
     <div class="container">
-        <h2>Bienvenue à l'Université de Kara</h2>
-        <p>Un centre d'excellence pour l'éducation, la recherche et l'innovation.</p>
-        <img src="universite.jpg" alt="Université de Kara" width="100%">
+        <section class="hero">
+            <img src="universite.jpg" alt="Campus de l'Université de Kara">
+            <div class="hero-text">
+                <h2>Bienvenue à l'Université de Kara</h2>
+                <p>Un centre d'excellence pour l'éducation, la recherche et l'innovation en Afrique de l'Ouest.</p>
+            </div>
+        </section>
         
-        <div class="faculty-section">
-            <h3><a href="faculte_medecine.html">Faculté des Sciences de la Santé (FSS)</a></h3>
-            <p>Formation en médecine, pharmacie et sciences biomédicales.</p>
-            <img src="medecine.jpg" alt="Faculté de Médecine" width="100%">
-        </div>
-        
-        <div class="faculty-section">
-            <h3><a href="faculte_lettres.html">Faculté des Lettres et Sciences Humaines</a></h3>
-            <p>Études en littérature, histoire, philosophie et sociologie.</p>
-            <img src="lettres.jpg" alt="Faculté des Lettres" width="100%">
-        </div>
-        
-        <div class="faculty-section">
-            <h3><a href="faculte_sciences.html">Faculté des Sciences et Technologies</a></h3>
-            <p>Programmes en mathématiques, physique, chimie et informatique.</p>
-            <img src="sciences.jpg" alt="Faculté des Sciences" width="100%">
-        </div>
+        <section>
+            <h2>Nos Facultés</h2>
+            
+            <article class="faculty-section">
+                <h3><a href="faculte_medecine.html">Faculté des Sciences de la Santé (FSS)</a></h3>
+                <p>Formation excellence en médecine, pharmacie et sciences biomédicales avec des infrastructures modernes et un corps professoral qualifié.</p>
+                <img src="medecine.jpg" alt="Faculté de Médecine" class="faculty-img">
+            </article>
+            
+            <article class="faculty-section">
+                <h3><a href="faculte_lettres.html">Faculté des Lettres et Sciences Humaines</a></h3>
+                <p>Études approfondies en littérature, histoire, philosophie et sociologie avec une approche interculturelle.</p>
+                <img src="lettres.jpg" alt="Faculté des Lettres" class="faculty-img">
+            </article>
+            
+            <article class="faculty-section">
+                <h3><a href="faculte_sciences.html">Faculté des Sciences et Technologies</a></h3>
+                <p>Programmes innovants en mathématiques, physique, chimie et informatique avec des laboratoires de pointe.</p>
+                <img src="sciences.jpg" alt="Faculté des Sciences" class="faculty-img">
+            </article>
+        </section>
     </div>
+    
     <footer>
-        &copy; 2025 Université de Kara - Tous droits réservés
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 Université de Kara - Tous droits réservés</p>
+            <p><a href="politique.html" style="color: white;">Politique de confidentialité</a> | <a href="conditions.html" style="color: white;">Conditions d'utilisation</a></p>
+        </div>
     </footer>
 </body>
 </html>
